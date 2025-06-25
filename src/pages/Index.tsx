@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import AlbumCard from "@/components/AlbumCard";
 import { albums } from "@/data/albums";
-import { Helmet } from "react-helmet";
 
 const Index = () => {
   const [featuredAlbums] = useState(albums);
@@ -22,23 +21,6 @@ const Index = () => {
   return (
 
     <div className="min-h-screen bg-yt-black text-white">
-      <Helmet>
-  <title>TuneFlip – Multilingual YouTube Music Clone</title>
-
-  {/* Open Graph (Facebook, WhatsApp) */}
-  <meta property="og:title" content="TuneFlip – Multilingual Music App" />
-  <meta property="og:description" content="Switch between languages for your favorite movie songs. Built with React + YouTube + AI." />
-  <meta property="og:image" content="https://mytune-youtube-clone.vercel.app/coverImages/header.png" />
-  <meta property="og:url" content="https://mytune-youtube-clone.vercel.app" />
-  <meta property="og:type" content="website" />
-
-  {/* Twitter card */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TuneFlip – Multilingual Music App" />
-  <meta name="twitter:description" content="Switch between languages for your favorite movie songs. Built with React + YouTube + AI." />
-  <meta name="twitter:image" content="https://mytune-youtube-clone.vercel.app/coverImages/header.png" />
-</Helmet>
-
       <Header />
       
       <main className="yt-container py-8">
