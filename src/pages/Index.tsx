@@ -4,6 +4,16 @@ import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import AlbumCard from "@/components/AlbumCard";
 import { albums } from "@/data/albums";
+import Head from "next/head";
+
+<Head>
+  <title>TuneFlip – YouTube Music Clone</title>
+  <meta property="og:title" content="TuneFlip – Language Switcher for Music" />
+  <meta property="og:description" content="Switch between languages for your favorite movie songs. Built with React + YouTube + AI." />
+  <meta property="og:image" content="https://mytune-youtube-clone.vercel.app/coverImages/header.png" />
+  <meta property="og:url" content="https://mytune-youtube-clone.vercel.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+</Head>
 
 const Index = () => {
   const [featuredAlbums] = useState(albums);
