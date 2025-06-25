@@ -29,10 +29,8 @@ const Index = () => {
           property="og:description"
           content="Switch between languages for your favorite movie songs. Built with React + YouTube + AI."
         />
-        <meta
-          property="og:image"
-          content="https://mytune-youtube-clone.vercel.app/coverImages/header.png"
-        />
+        <meta property="og:image" content="https://mytune-youtube-clone.vercel.app/coverImages/header-v2.png" />
+
         <meta property="og:url" content="https://mytune-youtube-clone.vercel.app" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
