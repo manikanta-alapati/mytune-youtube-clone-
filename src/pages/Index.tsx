@@ -23,17 +23,21 @@ const Index = () => {
 
     <div className="min-h-screen bg-yt-black text-white">
       <Helmet>
-        <title>TuneFlip – Multilingual YouTube Music Clone</title>
-        <meta property="og:title" content="TuneFlip – Multilingual Music App" />
-        <meta
-          property="og:description"
-          content="Switch between languages for your favorite movie songs. Built with React + YouTube + AI."
-        />
-        <meta property="og:image" content="https://mytune-youtube-clone.vercel.app/coverImages/header.png" />
+  <title>TuneFlip – Multilingual YouTube Music Clone</title>
 
-        <meta property="og:url" content="https://mytune-youtube-clone.vercel.app" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
+  {/* Open Graph (Facebook, WhatsApp) */}
+  <meta property="og:title" content="TuneFlip – Multilingual Music App" />
+  <meta property="og:description" content="Switch between languages for your favorite movie songs. Built with React + YouTube + AI." />
+  <meta property="og:image" content="https://mytune-youtube-clone.vercel.app/coverImages/header.png" />
+  <meta property="og:url" content="https://mytune-youtube-clone.vercel.app" />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TuneFlip – Multilingual Music App" />
+  <meta name="twitter:description" content="Switch between languages for your favorite movie songs. Built with React + YouTube + AI." />
+  <meta name="twitter:image" content="https://mytune-youtube-clone.vercel.app/coverImages/header.png" />
+</Helmet>
 
       <Header />
       
