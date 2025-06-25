@@ -6,15 +6,6 @@ import AlbumCard from "@/components/AlbumCard";
 import { albums } from "@/data/albums";
 import { Helmet } from "react-helmet";
 
-<Helmet>
-  <title>TuneFlip – Multilingual YouTube Music Clone</title>
-  <meta property="og:title" content="TuneFlip – Multilingual Music App" />
-  <meta property="og:description" content="Switch between languages for your favorite movie songs. Built with React + YouTube + AI." />
-  <meta property="og:image" content="https://mytune-youtube-clone.vercel.app/coverImages/header.png" />
-  <meta property="og:url" content="https://mytune-youtube-clone.vercel.app" />
-  <meta name="twitter:card" content="summary_large_image" />
-</Helmet>
-
 const Index = () => {
   const [featuredAlbums] = useState(albums);
   const navigate = useNavigate();
@@ -29,7 +20,23 @@ const Index = () => {
   };
 
   return (
+
     <div className="min-h-screen bg-yt-black text-white">
+      <Helmet>
+        <title>TuneFlip – Multilingual YouTube Music Clone</title>
+        <meta property="og:title" content="TuneFlip – Multilingual Music App" />
+        <meta
+          property="og:description"
+          content="Switch between languages for your favorite movie songs. Built with React + YouTube + AI."
+        />
+        <meta
+          property="og:image"
+          content="https://mytune-youtube-clone.vercel.app/coverImages/header.png"
+        />
+        <meta property="og:url" content="https://mytune-youtube-clone.vercel.app" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
       <Header />
       
       <main className="yt-container py-8">
