@@ -63,7 +63,7 @@ export const albums: Album[] = [
     id: "baahubali",
     title: "Baahubali: The Beginning",
     artist: "M.M. Keeravani",
-    coverImage: "src/coverImages/Baahubali_The_Beginning_poster.jpg",
+    coverImage: "coverImages/Baahubali_The_Beginning_poster.jpg",
     songs: [
       {
         id: "baahubali-1",
@@ -95,7 +95,7 @@ export const albums: Album[] = [
     id: "kgf",
     title: "KGF Chapter 1",
     artist: "Ravi Basrur",
-    coverImage: "src/coverImages/kgf_1.jpg",
+    coverImage: "coverImages/kgf_1.jpg",
     songs: [
       {
         id: "kgf-1",
@@ -127,7 +127,7 @@ export const albums: Album[] = [
     id: "pushpa",
     title: "Pushpa: The Rise",
     artist: "Devi Sri Prasad",
-    coverImage: "src/coverImages/pushpa1.jpg",
+    coverImage: "coverImages/pushpa1.jpg",
     songs: [
       {
         id: "pushpa-1",
@@ -151,7 +151,23 @@ export const albums: Album[] = [
         artist: "Indravathi Chauhan",
         duration: "3:19",
         youtubeId: "u_wB6byrl5k",
-        languages: ["Telugu", "Hindi", "Tamil", "Malayalam"]
+        languages: ["Telugu", "Hindi", "Tamil", "Malayalam","Kannada"]
+      },
+      {
+        id: "pushpa-4",
+        title: "Ey bidda",
+        artist: "Nakash Aziz",
+        duration: "3:33",
+        youtubeId: "jGetqo_SC9U",
+        languages: ["Telugu", "Hindi", "Tamil", "Malayalam","Kannada"]
+      },
+      {
+        id: "pushpa-5",
+        title: "Daakko Daakko Meka",
+        artist: "Nakash Aziz",
+        duration: "3:33",
+        youtubeId: "pc_784hcQxI",
+        languages: ["Telugu", "Hindi", "Tamil", "Malayalam","Kannada"]
       }
     ]
   },
@@ -159,7 +175,7 @@ export const albums: Album[] = [
     id: "worldcup",
     title: "FIFA World Cup: Official Songs",
     artist: "Various Artists",
-    coverImage: "src/coverImages/wakawaka.jpg",
+    coverImage: "coverImages/wakawaka.jpg",
     songs: [
       {
         id: "worldcup-1",
