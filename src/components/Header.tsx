@@ -31,16 +31,17 @@ const Header = ({ searchQuery, setSearchQuery }: HeaderProps) => {
           </Link>
         </div>
 
-        <div className="hidden md:flex relative flex-1 max-w-xl mx-6">
+        <div className="md:flex relative flex-1 max-w-xl mx-6">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <Search className="h-4 w-4 text-yt-light-gray" />
           </div>
           <Input
   value={searchQuery}
   onChange={(e) => setSearchQuery(e.target.value)}
-  className="pl-10 bg-yt-dark-gray border-none text-white focus-visible:ring-yt-purple"
+  className="pl-10 pr-4 py-2 w-full bg-yt-dark-gray border-none text-white text-sm focus-visible:ring-yt-purple"
   placeholder="Search songs, artists, albums..."
 />
+
 
         </div>
 
