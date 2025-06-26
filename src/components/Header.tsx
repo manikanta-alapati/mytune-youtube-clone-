@@ -4,7 +4,14 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-const Header = () => {
+interface HeaderProps {
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+}
+
+
+const Header = ({ searchQuery, setSearchQuery }: HeaderProps) => {
+
   return (
     <header className="sticky top-0 z-50 bg-yt-black border-b border-yt-dark-gray p-4">
       <div className="flex items-center justify-between">
@@ -28,10 +35,13 @@ const Header = () => {
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <Search className="h-4 w-4 text-yt-light-gray" />
           </div>
-          <Input 
-            className="pl-10 bg-yt-dark-gray border-none text-white focus-visible:ring-yt-purple"
-            placeholder="Search songs, artists, albums..."
-          />
+          <Input
+  value={searchQuery}
+  onChange={(e) => setSearchQuery(e.target.value)}
+  className="pl-10 bg-yt-dark-gray border-none text-white focus-visible:ring-yt-purple"
+  placeholder="Search songs, artists, albums..."
+/>
+
         </div>
 
         <div className="flex items-center">
