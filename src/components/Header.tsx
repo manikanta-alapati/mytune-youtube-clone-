@@ -48,7 +48,6 @@ const Header = ({ searchQuery, setSearchQuery }: HeaderProps) => {
         <div className="flex items-center">
           <Link to="/">
             <Button variant="ghost" size="icon" className="text-white hover:bg-yt-dark-gray">
-              <Search className="h-5 w-5 md:hidden" />
               <Home className="h-5 w-5 hidden md:block" />
             </Button>
           </Link>
