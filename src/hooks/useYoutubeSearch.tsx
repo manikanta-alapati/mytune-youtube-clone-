@@ -80,6 +80,46 @@ const languageVersionsMap: Record<string, Record<string, string>> = {
     "Tamil": "xu3IdW8Q6Yw",
     "Telugu": "KR4J6HoLAbs"
   },
+  //Leo Songs
+"Leo-1": { //Bad Ass
+    "Tamil": "IqwIOlhfCak",
+    "Telugu": "IcYKpiVppDck"
+  },
+  "Leo-2": { //Naa ready
+   
+    "Tamil": "3wDiqlTNlfQ",
+    "Telugu": "GbjRRNwmOQs"
+  },
+  "Leo-3": { // Ordinary Person
+   
+    "English":"WWr9086eWtY"
+  },
+  "Leo-4": { //I am Scared
+    "English":"MSaj9Otax6Y"
+  },
+  
+
+  //Master songs
+
+  "Master-1": { // Master Coming Video
+    "Tamil": "fRD_3vJagxk",
+    "Telugu": "qItykoFeqNE"
+  },
+  "Master-2": { //Vathi Raid
+   
+    "Tamil": "MkUIQm--UfA",
+    "Telugu": "L0dGYf69CZ0"
+  },
+  "Master-3": { // Chitti story
+   
+    "Telugu":"5WDQgBGfx40",
+    "Tamil":"nCNqPgXDYhY"
+
+  },
+  "Master-4": { //Master the Blaster
+    "English":"sUJ4pjfWArA"
+  },
+
 
   // Pushpa songs
   "pushpa-1": { // Srivalli

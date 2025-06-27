@@ -124,6 +124,87 @@ export const albums: Album[] = [
     ]
   },
   {
+    id: "Leo",
+    title: "Leo",
+    artist: "Anirudh",
+    coverImage: "coverImages/leo.jpg",
+    songs: [
+      {
+        id: "Leo-1",
+        title: "Bad ass",
+        artist: "Anirudh",
+        duration: "3:55",
+        youtubeId: "IcYKpiVppDck",
+        languages: ["Telugu", "Tamil"]
+      },
+      {
+        id: "Leo-2",
+        title: "Naa ready",
+        artist: "Anirudh",
+        duration: "4:14",
+        youtubeId: "GbjRRNwmOQs",
+        languages: ["Telugu", "Tamil"]
+      },
+      {
+        id: "Leo-3",
+        title: "Ordinary Person",
+        artist: "Anirudh",
+        duration: "2:18",
+        youtubeId: "WWr9086eWtY",
+        languages: ["English"]
+      },
+      {
+        id: "Leo-4",
+        title: "I am scared",
+        artist: "Anirudh",
+        duration: "2:26",
+        youtubeId: "MSaj9Otax6Y",
+        languages: ["English"]
+      }
+    ]
+  },
+
+  {
+    id: "Master",
+    title: "Master",
+    artist: "Anirudh",
+    coverImage: "coverImages/master.jpg",
+    songs: [
+      {
+        id: "Master-1",
+        title: "Master Coming",
+        artist: "Anirudh",
+        duration: "4:16",
+        youtubeId: "qItykoFeqNE",
+        languages: ["Telugu", "Tamil"]
+      },
+      {
+        id: "Master-2",
+        title: "Master Raid",
+        artist: "Anirudh",
+        duration: "3:53",
+        youtubeId: "L0dGYf69CZ0",
+        languages: ["Telugu", "Tamil"]
+      },
+      {
+        id: "Master-3",
+        title: "Master Chitti Story",
+        artist: "Anirudh",
+        duration: "4:59",
+        youtubeId: "5WDQgBGfx40",
+        languages: ["Telugu","Tamil"]
+      },
+      {
+        id: "Master-4",
+        title: "Master the Blaster",
+        artist: "Anirudh",
+        duration: "1:31",
+        youtubeId: "sUJ4pjfWArA",
+        languages: ["English"]
+      }
+    ]
+  },
+  {
     id: "pushpa",
     title: "Pushpa: The Rise",
     artist: "Devi Sri Prasad",
