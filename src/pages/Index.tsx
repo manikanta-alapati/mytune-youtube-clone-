@@ -35,8 +35,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-yt-black text-white">
       <Helmet>
-        <title>TuneFlip – Multilingual YouTube Music Clone</title>
-        <meta property="og:title" content="TuneFlip – Multilingual Music App" />
+        <title>MyTune – Multilingual Music </title>
+        <meta property="og:title" content="MyTune – Multilingual Music App" />
         <meta property="og:description" content="Switch between languages for your favorite movie songs. Built with React + YouTube + AI." />
         <meta property="og:image" content="https://mytune-youtube-clone.vercel.app/coverImages/header.png" />
         <meta property="og:url" content="https://mytune-youtube-clone.vercel.app" />
