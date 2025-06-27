@@ -7,6 +7,8 @@ import VideoPlayer from "@/components/VideoPlayer";
 import { Album, Song, getAlbumById } from "@/data/albums";
 import { ArrowLeft, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { usePlayerStore } from "@/store/player";
+
 
 const AlbumDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -17,6 +19,10 @@ const AlbumDetails = () => {
   const [currentSong, setCurrentSong] = useState<Song | null>(null);
   const [currentYoutubeId, setCurrentYoutubeId] = useState<string>("");
   const [imageError, setImageError] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const { setPlaylist, playSong } = usePlayerStore();
+
+
   
   useEffect(() => {
     if (id) {
@@ -64,8 +70,8 @@ const AlbumDetails = () => {
   if (!album) {
     return (
       <div className="min-h-screen bg-yt-black text-white">
-        <Header />
-        <div className="flex justify-center items-center h-[calc(100vh-80px)]">
+<Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+<div className="flex justify-center items-center h-[calc(100vh-80px)]">
           <div className="animate-pulse flex flex-col items-center">
             <div className="w-32 h-32 bg-yt-dark-gray rounded-full mb-4"></div>
             <div className="h-6 bg-yt-dark-gray rounded w-48 mb-4"></div>
@@ -78,7 +84,7 @@ const AlbumDetails = () => {
 
   return (
     <div className="min-h-screen bg-yt-black text-white">
-      <Header />
+<Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       
       <main className="yt-container py-8">
         <Button 
@@ -118,16 +124,18 @@ const AlbumDetails = () => {
               <h1 className="text-3xl font-bold mb-2">{album?.title}</h1>
               <p className="text-yt-light-gray mb-4">Album by {album?.artist}</p>
               <div className="flex gap-2">
-                <Button 
-                  className="bg-yt-red hover:bg-red-600"
-                  onClick={() => {
-                    if (album?.songs.length > 0) {
-                      handleSongSelect(album.songs[0]);
-                    }
-                  }}
-                >
-                  Play All
-                </Button>
+              <Button 
+  className=" hidden bg-yt-red hover:bg-red-600"
+  onClick={() => {
+    if (album?.songs.length > 0) {
+      setPlaylist(album.songs);
+      playSong(album.songs[0]);
+    }
+  }}
+>
+  Play All
+</Button>
+
               </div>
             </div>
           </div>
