@@ -31,16 +31,17 @@ const SongList = ({ songs, onSongSelect, currentSongId }: SongListProps) => {
 
   return (
     <div className="bg-yt-black rounded-lg overflow-hidden border border-yt-dark-gray">
+      {/* Header */}
       <div className="grid grid-cols-12 py-2 px-4 border-b border-yt-dark-gray text-yt-light-gray text-sm font-medium">
         <div className="col-span-1">#</div>
-        <div className="col-span-7 md:col-span-5">TITLE</div>
-        <div className="hidden md:block md:col-span-3">LANGUAGE</div>
-        <div className="col-span-3 md:col-span-2 text-right">
-          <Clock className="h-4 w-4 inline-block" />
+        <div className="col-span-6">TITLE</div>
+        <div className="col-span-5 flex justify-between items-center">
+          <span>LANGUAGE</span>
+          <Clock className="h-4 w-4" />
         </div>
-        <div className="col-span-1"></div>
       </div>
 
+      {/* Songs */}
       <div className="divide-y divide-yt-dark-gray">
         {songs.map((song, index) => (
           <div
@@ -71,14 +72,14 @@ const SongList = ({ songs, onSongSelect, currentSongId }: SongListProps) => {
               )}
             </div>
 
-            {/* Title + Artist */}
-            <div className="col-span-7 md:col-span-5">
+            {/* Title + artist */}
+            <div className="col-span-6">
               <h3 className="font-medium text-white truncate">{song.title}</h3>
               <p className="text-yt-light-gray text-sm truncate">{song.artist}</p>
             </div>
 
-            {/* Language switcher (desktop) */}
-            <div className="hidden md:block md:col-span-3">
+            {/* Language + duration together */}
+            <div className="col-span-5 flex justify-between items-center gap-4">
               <LanguageSwitcher
                 song={song}
                 currentLanguage={currentLanguages[song.id]}
@@ -86,22 +87,7 @@ const SongList = ({ songs, onSongSelect, currentSongId }: SongListProps) => {
                   handleLanguageSwitch(song.id, language, youtubeId)
                 }
               />
-            </div>
-
-            {/* Duration */}
-            <div className="col-span-3 md:col-span-2 text-right text-yt-light-gray">
-              {song.duration}
-            </div>
-
-            {/* Language switcher (mobile stacked under duration) */}
-            <div className="col-span-12 md:hidden mt-2 flex justify-end">
-              <LanguageSwitcher
-                song={song}
-                currentLanguage={currentLanguages[song.id]}
-                onLanguageSwitch={(language, youtubeId) =>
-                  handleLanguageSwitch(song.id, language, youtubeId)
-                }
-              />
+              <span className="text-yt-light-gray text-sm">{song.duration}</span>
             </div>
           </div>
         ))}
