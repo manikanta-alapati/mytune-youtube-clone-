@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Play, Clock } from "lucide-react";
 import { Song } from "@/data/albums";
@@ -12,7 +11,6 @@ interface SongListProps {
 
 const SongList = ({ songs, onSongSelect, currentSongId }: SongListProps) => {
   const [currentLanguages, setCurrentLanguages] = useState<Record<string, string>>(
-    // Initialize with the first language for each song
     songs.reduce((acc, song) => {
       acc[song.id] = song.languages[0] || "Unknown";
       return acc;
@@ -45,12 +43,13 @@ const SongList = ({ songs, onSongSelect, currentSongId }: SongListProps) => {
 
       <div className="divide-y divide-yt-dark-gray">
         {songs.map((song, index) => (
-          <div 
+          <div
             key={song.id}
             className={`grid grid-cols-12 py-3 px-4 items-center hover:bg-yt-dark-gray group ${
               currentSongId === song.id ? "bg-yt-dark-gray/50" : ""
             }`}
           >
+            {/* Number or playing bars */}
             <div className="col-span-1 text-yt-light-gray group-hover:text-white">
               {currentSongId === song.id ? (
                 <div className="w-5 h-5 animate-pulse flex items-center justify-center">
@@ -61,7 +60,7 @@ const SongList = ({ songs, onSongSelect, currentSongId }: SongListProps) => {
               ) : (
                 <div className="relative">
                   <span className="group-hover:hidden">{index + 1}</span>
-                  <button 
+                  <button
                     className="hidden group-hover:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     onClick={() => onSongSelect(song)}
                     aria-label={`Play ${song.title}`}
@@ -71,36 +70,38 @@ const SongList = ({ songs, onSongSelect, currentSongId }: SongListProps) => {
                 </div>
               )}
             </div>
-            
+
+            {/* Title + Artist */}
             <div className="col-span-7 md:col-span-5">
               <h3 className="font-medium text-white truncate">{song.title}</h3>
               <p className="text-yt-light-gray text-sm truncate">{song.artist}</p>
             </div>
-            
+
+            {/* Language switcher (desktop) */}
             <div className="hidden md:block md:col-span-3">
               <LanguageSwitcher
                 song={song}
                 currentLanguage={currentLanguages[song.id]}
-                onLanguageSwitch={(language, youtubeId) => 
+                onLanguageSwitch={(language, youtubeId) =>
                   handleLanguageSwitch(song.id, language, youtubeId)
                 }
               />
             </div>
-            
+
+            {/* Duration */}
             <div className="col-span-3 md:col-span-2 text-right text-yt-light-gray">
               {song.duration}
             </div>
-            
-            <div className="col-span-1">
-              <div className="flex md:hidden justify-end">
-                <LanguageSwitcher
-                  song={song}
-                  currentLanguage={currentLanguages[song.id]}
-                  onLanguageSwitch={(language, youtubeId) => 
-                    handleLanguageSwitch(song.id, language, youtubeId)
-                  }
-                />
-              </div>
+
+            {/* Language switcher (mobile stacked under duration) */}
+            <div className="col-span-12 md:hidden mt-2 flex justify-end">
+              <LanguageSwitcher
+                song={song}
+                currentLanguage={currentLanguages[song.id]}
+                onLanguageSwitch={(language, youtubeId) =>
+                  handleLanguageSwitch(song.id, language, youtubeId)
+                }
+              />
             </div>
           </div>
         ))}
