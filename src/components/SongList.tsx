@@ -78,17 +78,20 @@ const SongList = ({ songs, onSongSelect, currentSongId }: SongListProps) => {
               <p className="text-yt-light-gray text-sm truncate">{song.artist}</p>
             </div>
 
-            {/* Language + duration together */}
-            <div className="col-span-5 flex justify-between items-center gap-4">
-              <LanguageSwitcher
-                song={song}
-                currentLanguage={currentLanguages[song.id]}
-                onLanguageSwitch={(language, youtubeId) =>
-                  handleLanguageSwitch(song.id, language, youtubeId)
-                }
-              />
-              <span className="text-yt-light-gray text-sm">{song.duration}</span>
-            </div>
+           {/* Language + duration responsive layout */}
+           <div className="col-span-5 flex items-center justify-between gap-2">
+  <LanguageSwitcher
+    song={song}
+    currentLanguage={currentLanguages[song.id]}
+    onLanguageSwitch={(language, youtubeId) =>
+      handleLanguageSwitch(song.id, language, youtubeId)
+    }
+  />
+  <span className="text-yt-light-gray text-sm pr-1">{song.duration}</span>
+</div>
+
+
+
           </div>
         ))}
       </div>
