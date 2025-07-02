@@ -32,14 +32,15 @@ const SongList = ({ songs, onSongSelect, currentSongId }: SongListProps) => {
   return (
     <div className="bg-yt-black rounded-lg overflow-hidden border border-yt-dark-gray">
       {/* Header */}
-      <div className="grid grid-cols-12 py-2 px-4 border-b border-yt-dark-gray text-yt-light-gray text-sm font-medium">
-        <div className="col-span-1">#</div>
-        <div className="col-span-6">TITLE</div>
-        <div className="col-span-5 flex justify-between items-center">
-          <span>LANGUAGE</span>
-          <Clock className="h-4 w-4" />
-        </div>
-      </div>
+<div className="grid grid-cols-12 py-2 px-4 border-b border-yt-dark-gray text-yt-light-gray text-sm font-medium">
+  <div className="col-span-1">#</div>
+  <div className="col-span-6">TITLE</div>
+  <div className="col-span-5 flex justify-between items-center">
+    <span>LANGUAGE</span>
+    <Clock className="h-4 w-4 hidden md:inline" /> {/* Hide clock on mobile */}
+  </div>
+</div>
+
 
       {/* Songs */}
       <div className="divide-y divide-yt-dark-gray">
