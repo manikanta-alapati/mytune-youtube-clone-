@@ -87,7 +87,7 @@ const SongList = ({ songs, onSongSelect, currentSongId }: SongListProps) => {
       handleLanguageSwitch(song.id, language, youtubeId)
     }
   />
-  <span className="text-yt-light-gray text-sm pr-1">{song.duration}</span>
+<span className="text-yt-light-gray text-sm pr-1 hidden md:inline">{song.duration}</span>
 </div>
 
 
