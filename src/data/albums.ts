@@ -19,6 +19,23 @@ export interface Album {
 }
 
 export const albums: Album[] = [
+
+  {
+    id: "worldcup",
+    title: "FIFA World Cup: Official Songs",
+    artist: "Various Artists",
+    coverImage: "coverImages/wakawaka.jpg",
+    songs: [
+      {
+        id: "worldcup-1",
+        title: "Waka Waka (This Time for Africa)",
+        artist: "Shakira feat. Freshlyground",
+        duration: "3:22",
+        youtubeId: "pRpeEdMmmQ0",
+        languages: ["English", "Spanish"]
+      }
+    ]
+  },
   {
     id: "rrr",
     title: "RRR",
@@ -251,23 +268,8 @@ export const albums: Album[] = [
         languages: ["Telugu", "Hindi", "Tamil", "Malayalam","Kannada"]
       }
     ]
-  },
-  {
-    id: "worldcup",
-    title: "FIFA World Cup: Official Songs",
-    artist: "Various Artists",
-    coverImage: "coverImages/wakawaka.jpg",
-    songs: [
-      {
-        id: "worldcup-1",
-        title: "Waka Waka (This Time for Africa)",
-        artist: "Shakira feat. Freshlyground",
-        duration: "3:22",
-        youtubeId: "pRpeEdMmmQ0",
-        languages: ["English", "Spanish"]
-      }
-    ]
   }
+ 
 ];
 
 export const getAlbumById = (id: string): Album | undefined => {
